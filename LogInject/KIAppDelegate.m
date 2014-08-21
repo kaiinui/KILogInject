@@ -7,12 +7,17 @@
 //
 
 #import "KIAppDelegate.h"
+#import "KILogInject.h"
+#import "KIViewController.h"
 
 @implementation KIAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [KILogInject inspectInstanceMethod:@selector(doNothing:withString:) ofClass:[KIViewController class]];
+    
     return YES;
 }
 							

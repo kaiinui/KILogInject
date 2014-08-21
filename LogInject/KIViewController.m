@@ -8,8 +8,12 @@
 
 #import "KIViewController.h"
 #import "KILogInject.h"
+#import <Aspects.h>
+#import "KITestClass.h"
 
 @interface KIViewController ()
+
++ (void)doNothingInClassMethod:(NSString *)string;
 
 @end
 
@@ -19,15 +23,17 @@
 {
     [super viewDidLoad];
     
-    [KILogInject inspect:@selector(doNothing:withString:) of:self];
-    
     [self doNothing:@"somearg" withString:@"someString"];
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)doNothing:(NSString *)string withString:(NSString *)someStr {
-    
+    NSLog(@"THIS METHOD DOES NOT DO ANYTHING");
+}
+
++ (void)doNothingInClassMethod:(NSString *)string {
+    NSLog(@"DONITHINGINCLASS");
 }
 
 - (void)didReceiveMemoryWarning

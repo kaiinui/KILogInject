@@ -23,6 +23,7 @@
 		D4BAA62719A59D56001A299D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4BAA62519A59D56001A299D /* InfoPlist.strings */; };
 		D4BAA62919A59D56001A299D /* LogInjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BAA62819A59D56001A299D /* LogInjectTests.m */; };
 		D4BAA63519A5AFD3001A299D /* KILogInject.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BAA63419A5AFD3001A299D /* KILogInject.m */; };
+		D4BAA63819A5C052001A299D /* KITestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BAA63719A5C052001A299D /* KITestClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		D4BAA62819A59D56001A299D /* LogInjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogInjectTests.m; sourceTree = "<group>"; };
 		D4BAA63319A5AFD3001A299D /* KILogInject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KILogInject.h; sourceTree = "<group>"; };
 		D4BAA63419A5AFD3001A299D /* KILogInject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KILogInject.m; sourceTree = "<group>"; };
+		D4BAA63619A5C052001A299D /* KITestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KITestClass.h; sourceTree = "<group>"; };
+		D4BAA63719A5C052001A299D /* KITestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KITestClass.m; sourceTree = "<group>"; };
 		EB8A02C1E6C54F43B2BA9976 /* libPods-LogInject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LogInject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,6 +132,8 @@
 				D4BAA61319A59D56001A299D /* KIViewController.m */,
 				D4BAA61519A59D56001A299D /* Images.xcassets */,
 				D4BAA60419A59D56001A299D /* Supporting Files */,
+				D4BAA63619A5C052001A299D /* KITestClass.h */,
+				D4BAA63719A5C052001A299D /* KITestClass.m */,
 			);
 			path = LogInject;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4BAA63819A5C052001A299D /* KITestClass.m in Sources */,
 				D4BAA61419A59D56001A299D /* KIViewController.m in Sources */,
 				D4BAA60E19A59D56001A299D /* KIAppDelegate.m in Sources */,
 				D4BAA60A19A59D56001A299D /* main.m in Sources */,
