@@ -1,5 +1,6 @@
 #import "KILogInject.h"
 #import <Aspects.h>
+#import "NSInvocation+Simple.h"
 
 @implementation KILogInject
 
@@ -19,7 +20,7 @@
     return ^(id<AspectInfo> aspectInfo) {
         [self logBeforeInvoke:aspectInfo ofSelector:selector];
         NSDate *start = [NSDate date];
-        void *result = [self invoke:aspectInfo.originalInvocation];
+        id result = [self invoke:aspectInfo.originalInvocation];
         NSTimeInterval milliInterval = [self intervalInMilliSecond:start];
         [self logAfterInvoke:aspectInfo ofSelector:selector withResult:result withInterval:milliInterval];
     };
@@ -29,19 +30,15 @@
     return [startTime timeIntervalSinceNow] * -1000.0;
 }
 
-+ (void *)invoke:(NSInvocation *)invocation {
-    [invocation invoke];
-    NSUInteger length = [[invocation methodSignature] methodReturnLength];
-    void *result = (void *)malloc(length);
-    [invocation getReturnValue:&result];
-    return result;
++ (id)invoke:(NSInvocation *)invocation {
+    return [invocation invokeAndReturn]; // THANK YOU @kstenerud!
 }
 
 + (void)logBeforeInvoke:(id<AspectInfo>)aspectInfo ofSelector:(SEL)selector {
     NSLog(@"\n%@ \u21E2 -%s%@", aspectInfo.instance, sel_getName(selector) , aspectInfo.arguments);
 }
 
-+ (void)logAfterInvoke:(id<AspectInfo>)aspectInfo ofSelector:(SEL)selector withResult:(void *)result withInterval:(NSTimeInterval)milliInterval{
++ (void)logAfterInvoke:(id<AspectInfo>)aspectInfo ofSelector:(SEL)selector withResult:(id)result withInterval:(NSTimeInterval)milliInterval{
     NSLog(@"\n%@ \u21E0 -%s [%.2fms] = %@", aspectInfo.instance, sel_getName(selector) , milliInterval, result);
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1DBED6A344E94F5F822767FD /* libPods-LogInject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8A02C1E6C54F43B2BA9976 /* libPods-LogInject.a */; };
+		D411F1AC19A5F44F00EA2ECF /* NSInvocation+Simple.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F1AB19A5F44F00EA2ECF /* NSInvocation+Simple.m */; };
 		D4BAA5FE19A59D56001A299D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BAA5FD19A59D56001A299D /* Foundation.framework */; };
 		D4BAA60019A59D56001A299D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BAA5FF19A59D56001A299D /* CoreGraphics.framework */; };
 		D4BAA60219A59D56001A299D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BAA60119A59D56001A299D /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		712B30F5C5CF48C083B34D50 /* Pods-LogInject.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogInject.xcconfig"; path = "Pods/Pods-LogInject.xcconfig"; sourceTree = "<group>"; };
+		D411F1AA19A5F44F00EA2ECF /* NSInvocation+Simple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Simple.h"; sourceTree = "<group>"; };
+		D411F1AB19A5F44F00EA2ECF /* NSInvocation+Simple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+Simple.m"; sourceTree = "<group>"; };
 		D4BAA5FA19A59D56001A299D /* LogInject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogInject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4BAA5FD19A59D56001A299D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D4BAA5FF19A59D56001A299D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -89,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D411F1AD19A5F48D00EA2ECF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D411F1AA19A5F44F00EA2ECF /* NSInvocation+Simple.h */,
+				D411F1AB19A5F44F00EA2ECF /* NSInvocation+Simple.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		D4BAA5F119A59D56001A299D = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +182,7 @@
 		D4BAA63219A5AFC4001A299D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D411F1AD19A5F48D00EA2ECF /* Extensions */,
 				D4BAA63319A5AFD3001A299D /* KILogInject.h */,
 				D4BAA63419A5AFD3001A299D /* KILogInject.m */,
 			);
@@ -313,6 +326,7 @@
 				D4BAA61419A59D56001A299D /* KIViewController.m in Sources */,
 				D4BAA60E19A59D56001A299D /* KIAppDelegate.m in Sources */,
 				D4BAA60A19A59D56001A299D /* main.m in Sources */,
+				D411F1AC19A5F44F00EA2ECF /* NSInvocation+Simple.m in Sources */,
 				D4BAA63519A5AFD3001A299D /* KILogInject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
