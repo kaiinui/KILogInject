@@ -4,13 +4,13 @@ KILogInject
 NSLog() without NSLog()!
 
 ```
-2014-08-21 15:29:01.454 SomeApp[30278:60b] 
-⇢ <Some: 0x8e43400>-doNothing:withString: with (
+2014-08-21 18:48:02.789 SomeApp[32613:60b] 
+<SomeClass: 0x8d1a810> ⇢ -doNothing:withString:(
     Harry,
     Potter
 )
-2014-08-21 15:29:01.456 SomeApp[30278:60b] 
-⇠ <Some: 0x8e43400>-doNothing:withString:
+2014-08-21 18:48:03.792 SomeApp[32613:60b] 
+<SomeClass: 0x8d1a810> ⇠ -doNothing:withString: [87ms] = someargsomeString
 ```
 
 To inject the logger, call following method of the injector.
@@ -29,7 +29,7 @@ Or inject a Class?
 ---
 
 ```objc
-[KILogInject inspectInstanceMethods:@selector(doNothing:withString:) of:[Some class]];
+[KILogInject inspectInstanceMethods:@selector(doNothing:withString:) of:[SomeClass class]];
 ```
 
 Then
