@@ -7,6 +7,7 @@
 //
 
 #import "KIViewController.h"
+#import "KILogInject.h"
 
 @interface KIViewController ()
 
@@ -17,7 +18,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [KILogInject inspect:@selector(doNothing:withString:) of:self];
+    
+    [self doNothing:@"somearg" withString:@"someString"];
+    
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)doNothing:(NSString *)string withString:(NSString *)someStr {
+    
 }
 
 - (void)didReceiveMemoryWarning
