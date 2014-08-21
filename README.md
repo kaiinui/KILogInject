@@ -1,7 +1,7 @@
 KILogInject
 ===========
 
-NSLog() without NSLog()!
+NSLog() without NSLog()! It logs arguments and return value of targeted method behalf of you.
 
 ```
 2014-08-21 18:48:02.789 SomeApp[32613:60b] 
@@ -23,6 +23,14 @@ Then call the method of injected object. (Please note, `justStrcat:withString:` 
 
 ```objc
 [someObject justStrcat:@"Harry" withString:@"Potter"];
+```
+
+The implementation of the method is just concat string.
+
+```objc
+- (void)justStrcat:(NSString *)aString withString:(NSString *)bString {
+    return [NSString stringWithFormat:@"%@%@", aString, bString];
+}
 ```
 
 Or inject a Class?
