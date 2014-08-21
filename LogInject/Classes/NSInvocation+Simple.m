@@ -27,6 +27,7 @@
     const char* returnType = [[self methodSignature] methodReturnType];
     if(0 == strcmp(returnType, @encode(id)))
     {
+        // Modified by @_kaiinui, why NSMutableData? => http://stackoverflow.com/questions/9707233/free-and-malloc-with-nsvalue-and-nsinvocation
         NSUInteger length = [[self methodSignature] methodReturnLength];
         NSMutableData * dat = [NSMutableData dataWithLength:length];
         void * buffer = [dat mutableBytes];
