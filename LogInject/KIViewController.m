@@ -23,13 +23,15 @@
 {
     [super viewDidLoad];
     
-    [self doNothing:@"somearg" withString:@"someString"];
+    NSString *result = [self doNothing:@"somearg" withString:@"someString"];
+    NSLog(@"%@", result);
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)doNothing:(NSString *)string withString:(NSString *)someStr {
+- (NSString *)doNothing:(NSString *)string withString:(NSString *)someStr {
     NSLog(@"THIS METHOD DOES NOT DO ANYTHING");
+    return [NSString stringWithFormat:@"%@%@", string, someStr];
 }
 
 + (void)doNothingInClassMethod:(NSString *)string {

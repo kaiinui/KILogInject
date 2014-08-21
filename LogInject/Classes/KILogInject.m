@@ -11,10 +11,18 @@
 }
 
 + (void)inspectInstanceMethod:(SEL)selector ofClass:(Class)klass {
-    id beforeBlock = [self beforeBlock:selector];
-    id afterBlock = [self afterBlock:selector];
-    [klass aspect_hookSelector:selector withOptions:AspectPositionBefore usingBlock:beforeBlock error:NULL];
-    [klass aspect_hookSelector:selector withOptions:AspectPositionAfter usingBlock:afterBlock error:NULL];
+    id instead = ^(id<AspectInfo> aspectInfo) {
+        [self logBeforeInvoke:aspectInfo ofSelector:selector];
+        NSDate *start = [NSDate date];
+        NSInvocation *invocation = aspectInfo.originalInvocation;
+        [invocation invoke];
+        NSUInteger length = [[invocation methodSignature] methodReturnLength];
+        void *result = (void *)malloc(length);
+        [invocation getReturnValue:&result];
+        NSTimeInterval interval = [[NSDate date] timeIntervalSinceDate:start];
+        NSLog(@"\n\u21E0 %@ %@ in %.5f s", result ,[self methodDescription:aspectInfo withSelector:selector], interval);
+    };
+    [klass aspect_hookSelector:selector withOptions:AspectPositionInstead usingBlock:instead error:NULL];
 }
 
 #pragma mark - Helpers
