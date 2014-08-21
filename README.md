@@ -10,7 +10,7 @@ NSLog() without NSLog()!
     Potter
 )
 2014-08-21 18:48:03.792 SomeApp[32613:60b] 
-<SomeClass: 0x8d1a810> ⇠ -doNothing:withString: [87ms] = someargsomeString
+<SomeClass: 0x8d1a810> ⇠ -doNothing:withString: [87ms] = HarryPotter
 ```
 
 To inject the logger, call following method of the injector.
@@ -19,7 +19,7 @@ To inject the logger, call following method of the injector.
 [KILogInject inspect:@selector(doNothing:withString:) of:someObject];
 ```
 
-Then call the method of injected object. (Please note, `doNothing:withString:` does nothing, literally.)
+Then call the method of injected object. (Please note, `doNothing:withString:` does not log anything.)
 
 ```objc
 [someObject doNothing:@"Harry" withString:@"Potter"];
