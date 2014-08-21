@@ -11,21 +11,25 @@
 }
 
 + (void)inspectInstanceMethod:(SEL)selector ofClass:(Class)klass {
-    id instead = ^(id<AspectInfo> aspectInfo) {
+    id insteadBlock = ^(id<AspectInfo> aspectInfo) {
         [self logBeforeInvoke:aspectInfo ofSelector:selector];
         NSDate *start = [NSDate date];
-        NSInvocation *invocation = aspectInfo.originalInvocation;
-        [invocation invoke];
-        NSUInteger length = [[invocation methodSignature] methodReturnLength];
-        void *result = (void *)malloc(length);
-        [invocation getReturnValue:&result];
+        void *result = [self invoke:aspectInfo.originalInvocation];
         NSTimeInterval interval = [[NSDate date] timeIntervalSinceDate:start];
         NSLog(@"\n\u21E0 %@ %@ in %.5f s", result ,[self methodDescription:aspectInfo withSelector:selector], interval);
     };
-    [klass aspect_hookSelector:selector withOptions:AspectPositionInstead usingBlock:instead error:NULL];
+    [klass aspect_hookSelector:selector withOptions:AspectPositionInstead usingBlock:insteadBlock error:NULL];
 }
 
 #pragma mark - Helpers
+
++ (void *)invoke:(NSInvocation *)invocation {
+    [invocation invoke];
+    NSUInteger length = [[invocation methodSignature] methodReturnLength];
+    void *result = (void *)malloc(length);
+    [invocation getReturnValue:&result];
+    return result;
+}
 
 + (NSString *)methodDescription:(id<AspectInfo>)aspectInfo withSelector:(SEL)selector {
     return [NSString stringWithFormat:@"%@-%s", aspectInfo.instance, sel_getName(selector)];
