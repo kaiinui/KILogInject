@@ -16,7 +16,7 @@
 {
     // Override point for customization after application launch.
     
-    [KILogInject inspectInstanceMethod:@selector(doNothing:withString:) ofClass:[KIViewController class]];
+    [KILogInject inspectInstanceMethod:@selector(strcat:with:) ofClass:[KIViewController class]];
     
     return YES;
 }

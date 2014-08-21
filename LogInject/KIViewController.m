@@ -26,14 +26,13 @@
     //NSString *result = [self doNothing:@"somearg" withString:@"someString"];
     //NSLog(@"%@", result);
     
-    [self doNothing:@"somearg" withString:@"someString"];
+    [self strcat:@"HARRY" with:@"POTTER"];
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (NSString *)doNothing:(NSString *)string withString:(NSString *)someStr {
-    NSLog(@"THIS METHOD DOES NOT DO ANYTHING");
-    [NSThread sleepForTimeInterval:1.0f];
+- (NSString *)strcat:(NSString *)string with:(NSString *)someStr {
+    [NSThread sleepForTimeInterval:0.1f];
     return [NSString stringWithFormat:@"%@%@", string, someStr];
 }
 

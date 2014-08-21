@@ -5,13 +5,17 @@
 @implementation KILogInject
 
 + (void)inspect:(SEL)selector of:(NSObject *)object {
+#ifdef DEBUG
     id insteadBlock = [self insteadBlock:selector];
     [object aspect_hookSelector:selector withOptions:AspectPositionInstead usingBlock:insteadBlock error:NULL];
+#endif
 }
 
 + (void)inspectInstanceMethod:(SEL)selector ofClass:(Class)klass {
+#ifdef DEBUG
     id insteadBlock = [self insteadBlock:selector];
     [klass aspect_hookSelector:selector withOptions:AspectPositionInstead usingBlock:insteadBlock error:NULL];
+#endif
 }
 
 #pragma mark - Helpers
