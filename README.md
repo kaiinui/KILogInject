@@ -5,37 +5,37 @@ NSLog() without NSLog()!
 
 ```
 2014-08-21 18:48:02.789 SomeApp[32613:60b] 
-<SomeClass: 0x8d1a810> ⇢ -doNothing:withString:(
+<SomeClass: 0x8d1a810> ⇢ -justStrcat:withString:(
     Harry,
     Potter
 )
 2014-08-21 18:48:03.792 SomeApp[32613:60b] 
-<SomeClass: 0x8d1a810> ⇠ -doNothing:withString: [87ms] = HarryPotter
+<SomeClass: 0x8d1a810> ⇠ -justStrcat:withString: [87ms] = HarryPotter
 ```
 
 To inject the logger, call following method of the injector.
 
 ```objc
-[KILogInject inspect:@selector(doNothing:withString:) of:someObject];
+[KILogInject inspect:@selector(justStrcat:withString:) of:someObject];
 ```
 
-Then call the method of injected object. (Please note, `doNothing:withString:` does not log anything.)
+Then call the method of injected object. (Please note, `justStrcat:withString:` does not log anything.)
 
 ```objc
-[someObject doNothing:@"Harry" withString:@"Potter"];
+[someObject justStrcat:@"Harry" withString:@"Potter"];
 ```
 
 Or inject a Class?
 ---
 
 ```objc
-[KILogInject inspectInstanceMethods:@selector(doNothing:withString:) of:[SomeClass class]];
+[KILogInject inspectInstanceMethods:@selector(justStrcat:withString:) of:[SomeClass class]];
 ```
 
 Then
 
 ```objc
-[someObject doNothing:@"Harry" withString:@"Potter"];
+[someObject justStrcat:@"Harry" withString:@"Potter"];
 ```
 
 :sushi:
