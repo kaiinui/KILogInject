@@ -13,7 +13,7 @@ NSLog() without NSLog()! It logs arguments and return value of targeted method b
 <SomeClass: 0x8d1a810> ⇠ -justStrcat:withString: [87ms] = HarryPotter
 ```
 
-To inject the logger, call following method of the injector.
+To inject the logger, do following. (You can do this anywhere.)
 
 ```objc
 [KILogInject inspect:@selector(justStrcat:withString:) of:someObject];
@@ -40,10 +40,20 @@ Or inject a Class?
 [KILogInject inspectInstanceMethods:@selector(justStrcat:withString:) of:[SomeClass class]];
 ```
 
-Then
+You can do this in anywhere. Even you can declare logger injection in your AppDelegate!
 
 ```objc
-[someObject justStrcat:@"Harry" withString:@"Potter"];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self injectLoggers];
+    
+    return YES;
+}
+
+- (void)injectLoggers {
+    ..
+    [KILogInject inspectInstanceMethod:@selector(justStrcat:withString:) ofClass:[SomeClass class]];
+    ..
+}
 ```
 
 :sushi:
