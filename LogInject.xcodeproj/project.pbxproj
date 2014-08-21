@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4BAA5FE19A59D56001A299D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BAA5FD19A59D56001A299D /* Foundation.framework */; };
+		D4BAA60019A59D56001A299D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BAA5FF19A59D56001A299D /* CoreGraphics.framework */; };
+		D4BAA60219A59D56001A299D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BAA60119A59D56001A299D /* UIKit.framework */; };
+		D4BAA60819A59D56001A299D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4BAA60619A59D56001A299D /* InfoPlist.strings */; };
+		D4BAA60A19A59D56001A299D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BAA60919A59D56001A299D /* main.m */; };
+		D4BAA60E19A59D56001A299D /* KIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BAA60D19A59D56001A299D /* KIAppDelegate.m */; };
+		D4BAA61119A59D56001A299D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4BAA60F19A59D56001A299D /* Main.storyboard */; };
+		D4BAA61419A59D56001A299D /* KIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BAA61319A59D56001A299D /* KIViewController.m */; };
+		D4BAA61619A59D56001A299D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4BAA61519A59D56001A299D /* Images.xcassets */; };
+		D4BAA61D19A59D56001A299D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BAA61C19A59D56001A299D /* XCTest.framework */; };
+		D4BAA61E19A59D56001A299D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BAA5FD19A59D56001A299D /* Foundation.framework */; };
+		D4BAA61F19A59D56001A299D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BAA60119A59D56001A299D /* UIKit.framework */; };
+		D4BAA62719A59D56001A299D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4BAA62519A59D56001A299D /* InfoPlist.strings */; };
+		D4BAA62919A59D56001A299D /* LogInjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BAA62819A59D56001A299D /* LogInjectTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4BAA62019A59D56001A299D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4BAA5F219A59D56001A299D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4BAA5F919A59D56001A299D;
+			remoteInfo = LogInject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D4BAA5FA19A59D56001A299D /* LogInject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogInject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4BAA5FD19A59D56001A299D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D4BAA5FF19A59D56001A299D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D4BAA60119A59D56001A299D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D4BAA60519A59D56001A299D /* LogInject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LogInject-Info.plist"; sourceTree = "<group>"; };
+		D4BAA60719A59D56001A299D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D4BAA60919A59D56001A299D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D4BAA60B19A59D56001A299D /* LogInject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LogInject-Prefix.pch"; sourceTree = "<group>"; };
+		D4BAA60C19A59D56001A299D /* KIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KIAppDelegate.h; sourceTree = "<group>"; };
+		D4BAA60D19A59D56001A299D /* KIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KIAppDelegate.m; sourceTree = "<group>"; };
+		D4BAA61019A59D56001A299D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4BAA61219A59D56001A299D /* KIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KIViewController.h; sourceTree = "<group>"; };
+		D4BAA61319A59D56001A299D /* KIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KIViewController.m; sourceTree = "<group>"; };
+		D4BAA61519A59D56001A299D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D4BAA61B19A59D56001A299D /* LogInjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogInjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4BAA61C19A59D56001A299D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D4BAA62419A59D56001A299D /* LogInjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LogInjectTests-Info.plist"; sourceTree = "<group>"; };
+		D4BAA62619A59D56001A299D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D4BAA62819A59D56001A299D /* LogInjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogInjectTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4BAA5F719A59D56001A299D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4BAA60019A59D56001A299D /* CoreGraphics.framework in Frameworks */,
+				D4BAA60219A59D56001A299D /* UIKit.framework in Frameworks */,
+				D4BAA5FE19A59D56001A299D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4BAA61819A59D56001A299D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4BAA61D19A59D56001A299D /* XCTest.framework in Frameworks */,
+				D4BAA61F19A59D56001A299D /* UIKit.framework in Frameworks */,
+				D4BAA61E19A59D56001A299D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4BAA5F119A59D56001A299D = {
+			isa = PBXGroup;
+			children = (
+				D4BAA60319A59D56001A299D /* LogInject */,
+				D4BAA62219A59D56001A299D /* LogInjectTests */,
+				D4BAA5FC19A59D56001A299D /* Frameworks */,
+				D4BAA5FB19A59D56001A299D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4BAA5FB19A59D56001A299D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4BAA5FA19A59D56001A299D /* LogInject.app */,
+				D4BAA61B19A59D56001A299D /* LogInjectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4BAA5FC19A59D56001A299D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4BAA5FD19A59D56001A299D /* Foundation.framework */,
+				D4BAA5FF19A59D56001A299D /* CoreGraphics.framework */,
+				D4BAA60119A59D56001A299D /* UIKit.framework */,
+				D4BAA61C19A59D56001A299D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4BAA60319A59D56001A299D /* LogInject */ = {
+			isa = PBXGroup;
+			children = (
+				D4BAA60C19A59D56001A299D /* KIAppDelegate.h */,
+				D4BAA60D19A59D56001A299D /* KIAppDelegate.m */,
+				D4BAA60F19A59D56001A299D /* Main.storyboard */,
+				D4BAA61219A59D56001A299D /* KIViewController.h */,
+				D4BAA61319A59D56001A299D /* KIViewController.m */,
+				D4BAA61519A59D56001A299D /* Images.xcassets */,
+				D4BAA60419A59D56001A299D /* Supporting Files */,
+			);
+			path = LogInject;
+			sourceTree = "<group>";
+		};
+		D4BAA60419A59D56001A299D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4BAA60519A59D56001A299D /* LogInject-Info.plist */,
+				D4BAA60619A59D56001A299D /* InfoPlist.strings */,
+				D4BAA60919A59D56001A299D /* main.m */,
+				D4BAA60B19A59D56001A299D /* LogInject-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4BAA62219A59D56001A299D /* LogInjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4BAA62819A59D56001A299D /* LogInjectTests.m */,
+				D4BAA62319A59D56001A299D /* Supporting Files */,
+			);
+			path = LogInjectTests;
+			sourceTree = "<group>";
+		};
+		D4BAA62319A59D56001A299D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4BAA62419A59D56001A299D /* LogInjectTests-Info.plist */,
+				D4BAA62519A59D56001A299D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4BAA5F919A59D56001A299D /* LogInject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4BAA62C19A59D56001A299D /* Build configuration list for PBXNativeTarget "LogInject" */;
+			buildPhases = (
+				D4BAA5F619A59D56001A299D /* Sources */,
+				D4BAA5F719A59D56001A299D /* Frameworks */,
+				D4BAA5F819A59D56001A299D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LogInject;
+			productName = LogInject;
+			productReference = D4BAA5FA19A59D56001A299D /* LogInject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4BAA61A19A59D56001A299D /* LogInjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4BAA62F19A59D56001A299D /* Build configuration list for PBXNativeTarget "LogInjectTests" */;
+			buildPhases = (
+				D4BAA61719A59D56001A299D /* Sources */,
+				D4BAA61819A59D56001A299D /* Frameworks */,
+				D4BAA61919A59D56001A299D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4BAA62119A59D56001A299D /* PBXTargetDependency */,
+			);
+			name = LogInjectTests;
+			productName = LogInjectTests;
+			productReference = D4BAA61B19A59D56001A299D /* LogInjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4BAA5F219A59D56001A299D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KI;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = kaiinui;
+				TargetAttributes = {
+					D4BAA61A19A59D56001A299D = {
+						TestTargetID = D4BAA5F919A59D56001A299D;
+					};
+				};
+			};
+			buildConfigurationList = D4BAA5F519A59D56001A299D /* Build configuration list for PBXProject "LogInject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4BAA5F119A59D56001A299D;
+			productRefGroup = D4BAA5FB19A59D56001A299D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4BAA5F919A59D56001A299D /* LogInject */,
+				D4BAA61A19A59D56001A299D /* LogInjectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4BAA5F819A59D56001A299D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4BAA61619A59D56001A299D /* Images.xcassets in Resources */,
+				D4BAA60819A59D56001A299D /* InfoPlist.strings in Resources */,
+				D4BAA61119A59D56001A299D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4BAA61919A59D56001A299D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4BAA62719A59D56001A299D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4BAA5F619A59D56001A299D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4BAA61419A59D56001A299D /* KIViewController.m in Sources */,
+				D4BAA60E19A59D56001A299D /* KIAppDelegate.m in Sources */,
+				D4BAA60A19A59D56001A299D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4BAA61719A59D56001A299D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4BAA62919A59D56001A299D /* LogInjectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4BAA62119A59D56001A299D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4BAA5F919A59D56001A299D /* LogInject */;
+			targetProxy = D4BAA62019A59D56001A299D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D4BAA60619A59D56001A299D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4BAA60719A59D56001A299D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D4BAA60F19A59D56001A299D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4BAA61019A59D56001A299D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D4BAA62519A59D56001A299D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4BAA62619A59D56001A299D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4BAA62A19A59D56001A299D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D4BAA62B19A59D56001A299D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4BAA62D19A59D56001A299D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LogInject/LogInject-Prefix.pch";
+				INFOPLIST_FILE = "LogInject/LogInject-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D4BAA62E19A59D56001A299D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LogInject/LogInject-Prefix.pch";
+				INFOPLIST_FILE = "LogInject/LogInject-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D4BAA63019A59D56001A299D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LogInject.app/LogInject";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LogInject/LogInject-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LogInjectTests/LogInjectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D4BAA63119A59D56001A299D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LogInject.app/LogInject";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LogInject/LogInject-Prefix.pch";
+				INFOPLIST_FILE = "LogInjectTests/LogInjectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4BAA5F519A59D56001A299D /* Build configuration list for PBXProject "LogInject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4BAA62A19A59D56001A299D /* Debug */,
+				D4BAA62B19A59D56001A299D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4BAA62C19A59D56001A299D /* Build configuration list for PBXNativeTarget "LogInject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4BAA62D19A59D56001A299D /* Debug */,
+				D4BAA62E19A59D56001A299D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D4BAA62F19A59D56001A299D /* Build configuration list for PBXNativeTarget "LogInjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4BAA63019A59D56001A299D /* Debug */,
+				D4BAA63119A59D56001A299D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4BAA5F219A59D56001A299D /* Project object */;
+}
