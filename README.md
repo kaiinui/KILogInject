@@ -3,29 +3,29 @@ KILogInject
 
 NSLog() without NSLog()!
 
+```
+2014-08-21 15:29:01.454 SomeApp[30278:60b] 
+⇢ <Some: 0x8e43400>-doNothing:withString: with (
+    Harry,
+    Potter
+)
+2014-08-21 15:29:01.456 SomeApp[30278:60b] 
+⇠ <Some: 0x8e43400>-doNothing:withString:
+```
+
+To inject the logger, call following method of the injector.
+
 ```objc
 [KILogInject inspect:@selector(doNothing:withString:) of:someObject];
 ```
 
-Then call the method.
+Then call the method of injected object. (Please note, `doNothing:withString:` does nothing, literally.)
 
 ```objc
 [someObject doNothing:@"Harry" withString:@"Potter"];
 ```
 
-Will records following logs automatically! (`doNothing:withString:` does nothing, literally.)
-
-```
-2014-08-21 15:29:01.454 LogInject[30278:60b] 
-⇢ <Some: 0x8e43400>-doNothing:withString: with (
-    Harry,
-    Potter
-)
-2014-08-21 15:29:01.456 LogInject[30278:60b] 
-⇠ <Some: 0x8e43400>-doNothing:withString:
-```
-
-Or inject instance methods?
+Or inject a Class?
 ---
 
 ```objc
@@ -38,7 +38,7 @@ Then
 [someObject doNothing:@"Harry" withString:@"Potter"];
 ```
 
-And fun!
+:sushi:
 
 LICENSE
 ---
