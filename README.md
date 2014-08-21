@@ -1,0 +1,4 @@
+KILogInject
+===========
+
+NSLog() without NSLog()!
