@@ -19,7 +19,7 @@ To inject the logger, do following. (You can do this anywhere.)
 [KILogInject inspect:@selector(justStrcat:withString:) of:someObject];
 ```
 
-Then call the method of injected object. (Please note, `justStrcat:withString:` does not log anything.)
+Then call the method to see the logs! (Please note, `justStrcat:withString:` does not log anything.)
 
 ```objc
 [someObject justStrcat:@"Harry" withString:@"Potter"];
@@ -57,6 +57,12 @@ You can do this in anywhere. Even you can declare logger injection in your AppDe
 ```
 
 :sushi:
+
+LOADMAP
+---
+
+- [ ] Observes instance properties and log the changes.
+- [ ] Receives notifications and log them.
 
 LICENSE
 ---
