@@ -1,6 +1,8 @@
 KILogInject
 ===========
 
+![](http://img.shields.io/cocoapods/v/KILogInject.svg?style=flat)
+
 NSLog() without NSLog()! It logs arguments and return value of targeted method behalf of you.
 
 ```
