@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "kaiinui" => "lied.der.optik@gmail.com" }
   s.source       = { :git => "https://github.com/kaiinui/KILogInject.git", :tag => "v0.1.0" }
-  s.source_files  = "KILogInject/Classes/**/*.{h,m}"
+  s.source_files  = "LogInject/Classes/**/*.{h,m}"
   s.requires_arc = true
   s.dependency "Aspects"
   s.platform = "ios", '7.0'

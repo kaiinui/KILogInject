@@ -6,3 +6,5 @@
 + (void)inspectInstanceMethod:(SEL)selector ofClass:(Class)klass;
 
 @end
+
+#import "KILogInject+NSNotification.h"
