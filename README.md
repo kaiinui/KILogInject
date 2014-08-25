@@ -1,44 +1,70 @@
 KILogInject
 ===========
 
-NSLog() without NSLog()!
+![](http://img.shields.io/cocoapods/v/KILogInject.svg?style=flat)
+
+NSLog() without NSLog()! It logs arguments and return value of targeted method behalf of you.
 
 ```
 2014-08-21 18:48:02.789 SomeApp[32613:60b] 
-<SomeClass: 0x8d1a810> ⇢ -doNothing:withString:(
+<SomeClass: 0x8d1a810> ⇢ -justStrcat:withString:(
     Harry,
     Potter
 )
 2014-08-21 18:48:03.792 SomeApp[32613:60b] 
-<SomeClass: 0x8d1a810> ⇠ -doNothing:withString: [87ms] = HarryPotter
+<SomeClass: 0x8d1a810> ⇠ -justStrcat:withString: [87ms] = HarryPotter
 ```
 
-To inject the logger, call following method of the injector.
+To inject the logger, do following. (You can do this anywhere.)
 
 ```objc
-[KILogInject inspect:@selector(doNothing:withString:) of:someObject];
+[KILogInject inspect:@selector(justStrcat:withString:) of:someObject];
 ```
 
-Then call the method of injected object. (Please note, `doNothing:withString:` does not log anything.)
+Then call the method to see the logs! (Please note, `justStrcat:withString:` does not log anything.)
 
 ```objc
-[someObject doNothing:@"Harry" withString:@"Potter"];
+[someObject justStrcat:@"Harry" withString:@"Potter"];
+```
+
+The implementation of the method is just concat string.
+
+```objc
+- (void)justStrcat:(NSString *)aString withString:(NSString *)bString {
+    return [NSString stringWithFormat:@"%@%@", aString, bString];
+}
 ```
 
 Or inject a Class?
 ---
 
 ```objc
-[KILogInject inspectInstanceMethods:@selector(doNothing:withString:) of:[SomeClass class]];
+[KILogInject inspectInstanceMethods:@selector(justStrcat:withString:) of:[SomeClass class]];
 ```
 
-Then
+You can do this in anywhere. Even you can declare logger injection in your AppDelegate!
 
 ```objc
-[someObject doNothing:@"Harry" withString:@"Potter"];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self injectLoggers];
+    
+    return YES;
+}
+
+- (void)injectLoggers {
+    ..
+    [KILogInject inspectInstanceMethod:@selector(justStrcat:withString:) ofClass:[SomeClass class]];
+    ..
+}
 ```
 
 :sushi:
+
+LOADMAP
+---
+
+- [ ] Observes instance properties and log the changes.
+- [ ] Receives notifications and log them.
 
 LICENSE
 ---
