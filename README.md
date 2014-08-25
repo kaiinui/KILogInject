@@ -60,11 +60,23 @@ You can do this in anywhere. Even you can declare logger injection in your AppDe
 
 :sushi:
 
+Observes notifications
+---
+
+```objc
+[KILogInject notification:@"SomeNotificationName" from:someObject];
+```
+
+Will records
+
+```
+NSNotification<SomeNotificationName> from <SomeClass: 0x8da64d0>
+```
+
 LOADMAP
 ---
 
 - [ ] Observes instance properties and log the changes.
-- [ ] Receives notifications and log them.
 
 LICENSE
 ---
