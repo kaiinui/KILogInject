@@ -10,6 +10,6 @@
 
 @interface KILogInject (NSNotification)
 
-+ (void)notification:(NSString *)name ofObject:(id)object;
++ (void)notification:(NSString *)name from:(id)sender;
 
 @end

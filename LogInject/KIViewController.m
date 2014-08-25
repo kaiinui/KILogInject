@@ -28,7 +28,7 @@
     
     [self strcat:@"HARRY" with:@"POTTER"];
     
-    [KILogInject notification:@"hoge" ofObject:self];
+    [KILogInject notification:@"hoge" from:self];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"hoge" object:self];
     
 	// Do any additional setup after loading the view, typically from a nib.
