@@ -3,6 +3,8 @@ KILogInject
 
 ![](http://img.shields.io/cocoapods/v/KILogInject.svg?style=flat)
 
+![](https://dl.dropboxusercontent.com/u/7817937/_github/kiloginject.png)
+
 KILogInject is a set of logger utilities. It contains..
 
 1. [Method call logger](#method-call-logger)
