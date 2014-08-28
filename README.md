@@ -16,15 +16,7 @@ Method Call Logger
 
 NSLog() without NSLog()! It logs arguments and return value of targeted method behalf of you.
 
-```
-2014-08-21 18:48:02.789 SomeApp[32613:60b] 
-<SomeClass: 0x8d1a810> ⇢ -strcat:withString:(
-    Harry,
-    Potter
-)
-2014-08-21 18:48:03.792 SomeApp[32613:60b] 
-<SomeClass: 0x8d1a810> ⇠ -strcat:withString: [87ms] = HarryPotter
-```
+![](https://dl.dropboxusercontent.com/u/7817937/_github/kiloginject_method.png)
 
 To inject the logger, do following. (You can do this anywhere.)
 
@@ -65,6 +57,8 @@ Property Change Logger
 ```
 
 Then when you set some properties of the object, `KILogInject` will records the changes like..
+
+![](https://dl.dropboxusercontent.com/u/7817937/_github/kiloginject.png)
 
 ```
 ➠ <Book: 0x8d48770>.author = John Smith ⇦ <null>
