@@ -3,43 +3,40 @@ KILogInject
 
 ![](http://img.shields.io/cocoapods/v/KILogInject.svg?style=flat)
 
+KILogInject is a set of logger utilities. It contains..
+
+1. Method call logger
+2. Property change logger
+3. Notification logger
+
+1. Method Call Logger
+---
+
 NSLog() without NSLog()! It logs arguments and return value of targeted method behalf of you.
 
 ```
 2014-08-21 18:48:02.789 SomeApp[32613:60b] 
-<SomeClass: 0x8d1a810> ⇢ -justStrcat:withString:(
+<SomeClass: 0x8d1a810> ⇢ -strcat:withString:(
     Harry,
     Potter
 )
 2014-08-21 18:48:03.792 SomeApp[32613:60b] 
-<SomeClass: 0x8d1a810> ⇠ -justStrcat:withString: [87ms] = HarryPotter
+<SomeClass: 0x8d1a810> ⇠ -strcat:withString: [87ms] = HarryPotter
 ```
 
 To inject the logger, do following. (You can do this anywhere.)
 
 ```objc
-[KILogInject inspect:@selector(justStrcat:withString:) of:someObject];
+[KILogInject inspect:@selector(strcat:withString:) of:someObject];
 ```
 
-Then call the method to see the logs! (Please note, `justStrcat:withString:` does not log anything.)
+Then `KILogInjector` will records the log for every method call.
 
-```objc
-[someObject justStrcat:@"Harry" withString:@"Potter"];
-```
-
-The implementation of the method is just concat string.
-
-```objc
-- (void)justStrcat:(NSString *)aString withString:(NSString *)bString {
-    return [NSString stringWithFormat:@"%@%@", aString, bString];
-}
-```
-
-Or inject a Class?
+Or inject a class?
 ---
 
 ```objc
-[KILogInject inspectInstanceMethods:@selector(justStrcat:withString:) of:[SomeClass class]];
+[KILogInject inspectInstanceMethods:@selector(strcat:withString:) of:[SomeClass class]];
 ```
 
 You can do this in anywhere. Even you can declare logger injection in your AppDelegate!
@@ -53,14 +50,30 @@ You can do this in anywhere. Even you can declare logger injection in your AppDe
 
 - (void)injectLoggers {
     ..
-    [KILogInject inspectInstanceMethod:@selector(justStrcat:withString:) ofClass:[SomeClass class]];
+    [KILogInject inspectInstanceMethod:@selector(strcat:withString:) ofClass:[SomeClass class]];
     ..
 }
 ```
 
-:sushi:
+2. Property Change Logger
+---
 
-Observes notifications
+```objc
+[KILogInject properties:object];
+```
+
+Then when you set some properties of the object, `KILogInject` will records the changes like..
+
+```
+➠ <Book: 0x8d48770>.author = John Smith ⇦ <null>
+➠ <Book: 0x8d48770>.title = Effective Cocoa ⇦ <null>
+➠ <Book: 0x8d48770>.price = 20 ⇦ 0
+
+➠ <Book: 0x8d48770>.title = Effective Cocoa 2nd edition ⇦ Effective Cocoa
+➠ <Book: 0x8d48770>.price = 40 ⇦ 20
+```
+
+3. Notification Logger
 ---
 
 ```objc
@@ -73,10 +86,11 @@ Will records
 NSNotification<SomeNotificationName> from <SomeClass: 0x8da64d0>
 ```
 
-LOADMAP
----
+Or there is shorthand for object:`nil` notifications.
 
-- [ ] Observes instance properties and log the changes.
+```objc
+[KILogInject notification:@"SomeNotificationName"];
+```
 
 LICENSE
 ---
