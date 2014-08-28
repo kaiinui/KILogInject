@@ -88,6 +88,11 @@ Or there is shorthand for object:`nil` notifications.
 [KILogInject notification:@"SomeNotificationName"];
 ```
 
+Installation
+---
+
+`pod 'KILogInject'`
+
 LICENSE
 ---
 
