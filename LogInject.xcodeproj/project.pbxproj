@@ -27,6 +27,9 @@
 		D4BAA62919A59D56001A299D /* LogInjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BAA62819A59D56001A299D /* LogInjectTests.m */; };
 		D4BAA63519A5AFD3001A299D /* KILogInject.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BAA63419A5AFD3001A299D /* KILogInject.m */; };
 		D4BAA63819A5C052001A299D /* KITestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BAA63719A5C052001A299D /* KITestClass.m */; };
+		D4CE963519AF42160072575F /* KILogInject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CE963419AF42160072575F /* KILogInject+Properties.m */; };
+		D4CE963819AF51C70072575F /* NSObject+PropertyArray.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CE963719AF51C70072575F /* NSObject+PropertyArray.m */; };
+		D4CE963B19AF52DA0072575F /* KITestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D4CE963A19AF52DA0072575F /* KITestObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,12 @@
 		D4BAA63419A5AFD3001A299D /* KILogInject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KILogInject.m; sourceTree = "<group>"; };
 		D4BAA63619A5C052001A299D /* KITestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KITestClass.h; sourceTree = "<group>"; };
 		D4BAA63719A5C052001A299D /* KITestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KITestClass.m; sourceTree = "<group>"; };
+		D4CE963319AF42160072575F /* KILogInject+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KILogInject+Properties.h"; sourceTree = "<group>"; };
+		D4CE963419AF42160072575F /* KILogInject+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KILogInject+Properties.m"; sourceTree = "<group>"; };
+		D4CE963619AF51C70072575F /* NSObject+PropertyArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PropertyArray.h"; sourceTree = "<group>"; };
+		D4CE963719AF51C70072575F /* NSObject+PropertyArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertyArray.m"; sourceTree = "<group>"; };
+		D4CE963919AF52DA0072575F /* KITestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KITestObject.h; sourceTree = "<group>"; };
+		D4CE963A19AF52DA0072575F /* KITestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KITestObject.m; sourceTree = "<group>"; };
 		EB8A02C1E6C54F43B2BA9976 /* libPods-LogInject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LogInject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,6 +112,8 @@
 			children = (
 				D411F1AA19A5F44F00EA2ECF /* NSInvocation+Simple.h */,
 				D411F1AB19A5F44F00EA2ECF /* NSInvocation+Simple.m */,
+				D4CE963619AF51C70072575F /* NSObject+PropertyArray.h */,
+				D4CE963719AF51C70072575F /* NSObject+PropertyArray.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -148,6 +159,8 @@
 				D4BAA60F19A59D56001A299D /* Main.storyboard */,
 				D4BAA61219A59D56001A299D /* KIViewController.h */,
 				D4BAA61319A59D56001A299D /* KIViewController.m */,
+				D4CE963919AF52DA0072575F /* KITestObject.h */,
+				D4CE963A19AF52DA0072575F /* KITestObject.m */,
 				D4BAA61519A59D56001A299D /* Images.xcassets */,
 				D4BAA60419A59D56001A299D /* Supporting Files */,
 				D4BAA63619A5C052001A299D /* KITestClass.h */,
@@ -192,6 +205,8 @@
 				D4BAA63319A5AFD3001A299D /* KILogInject.h */,
 				D4BAA63419A5AFD3001A299D /* KILogInject.m */,
 				D411F2D619AB4DDF00EA2ECF /* KILogInject+NSNotification.h */,
+				D4CE963319AF42160072575F /* KILogInject+Properties.h */,
+				D4CE963419AF42160072575F /* KILogInject+Properties.m */,
 				D411F2D719AB4DDF00EA2ECF /* KILogInject+NSNotification.m */,
 				D411F2D919AB4E1000EA2ECF /* KINotificationObserver.h */,
 				D411F2DA19AB4E1000EA2ECF /* KINotificationObserver.m */,
@@ -332,13 +347,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4CE963B19AF52DA0072575F /* KITestObject.m in Sources */,
 				D411F2D819AB4DDF00EA2ECF /* KILogInject+NSNotification.m in Sources */,
 				D4BAA63819A5C052001A299D /* KITestClass.m in Sources */,
 				D4BAA61419A59D56001A299D /* KIViewController.m in Sources */,
 				D4BAA60E19A59D56001A299D /* KIAppDelegate.m in Sources */,
 				D4BAA60A19A59D56001A299D /* main.m in Sources */,
 				D411F1AC19A5F44F00EA2ECF /* NSInvocation+Simple.m in Sources */,
+				D4CE963519AF42160072575F /* KILogInject+Properties.m in Sources */,
 				D411F2DB19AB4E1000EA2ECF /* KINotificationObserver.m in Sources */,
+				D4CE963819AF51C70072575F /* NSObject+PropertyArray.m in Sources */,
 				D4BAA63519A5AFD3001A299D /* KILogInject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

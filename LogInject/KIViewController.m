@@ -10,6 +10,7 @@
 #import "KILogInject.h"
 #import <Aspects.h>
 #import "KITestClass.h"
+#import "KITestObject.h"
 
 @interface KIViewController ()
 
@@ -26,10 +27,13 @@
     //NSString *result = [self doNothing:@"somearg" withString:@"someString"];
     //NSLog(@"%@", result);
     
-    [self strcat:@"HARRY" with:@"POTTER"];
+    //[self strcat:@"HARRY" with:@"POTTER"];
     
-    [KILogInject notification:@"hoge" from:self];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"hoge" object:self];
+    //[KILogInject notification:@"hoge" from:self];
+    //[[NSNotificationCenter defaultCenter] postNotificationName:@"hoge" object:self];
+    
+    KITestObject *object = [KITestObject new];
+    [KILogInject properties:object];
     
 	// Do any additional setup after loading the view, typically from a nib.
 }

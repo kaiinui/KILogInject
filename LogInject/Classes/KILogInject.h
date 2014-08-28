@@ -8,3 +8,4 @@
 @end
 
 #import "KILogInject+NSNotification.h"
+#import "KILogInject+Properties.h"
