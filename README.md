@@ -5,11 +5,11 @@ KILogInject
 
 KILogInject is a set of logger utilities. It contains..
 
-1. Method call logger
-2. Property change logger
-3. Notification logger
+1. [Method call logger](#method-call-logger)
+2. [Property change logger](#property-change-logger)
+3. [Notification logger](#notification-logger)
 
-1. Method Call Logger
+Method Call Logger
 ---
 
 NSLog() without NSLog()! It logs arguments and return value of targeted method behalf of you.
@@ -55,7 +55,7 @@ You can do this in anywhere. Even you can declare logger injection in your AppDe
 }
 ```
 
-2. Property Change Logger
+Property Change Logger
 ---
 
 ```objc
@@ -73,7 +73,7 @@ Then when you set some properties of the object, `KILogInject` will records the 
 ➠ <Book: 0x8d48770>.price = 40 ⇦ 20
 ```
 
-3. Notification Logger
+Notification Logger
 ---
 
 ```objc
