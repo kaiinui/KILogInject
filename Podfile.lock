@@ -1,10 +1,13 @@
 PODS:
   - Aspects (1.4.1)
+  - KVOController (1.0.1)
 
 DEPENDENCIES:
   - Aspects
+  - KVOController
 
 SPEC CHECKSUMS:
   Aspects: a6368eba05295b24ffe0e9acfb9080cc3b0f4b5f
+  KVOController: e6ad4a058ab0ceed546802361adb89d322a22cf2
 
 COCOAPODS: 0.33.1

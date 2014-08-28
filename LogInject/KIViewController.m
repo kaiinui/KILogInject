@@ -34,6 +34,11 @@
     
     KITestObject *object = [KITestObject new];
     [KILogInject properties:object];
+    object.name = @"hgoe";
+    object.title = @"Hwaii";
+    object.title = @"Next Hawaii";
+    object.hoge = 3;
+    object.age = 3;
     
 	// Do any additional setup after loading the view, typically from a nib.
 }

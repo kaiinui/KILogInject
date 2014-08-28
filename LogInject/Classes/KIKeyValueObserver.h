@@ -1,5 +1,5 @@
 //
-//  KITestObject.h
+//  KIKeyValueObserver.h
 //  LogInject
 //
 //  Created by kaiinui on 2014/08/28.
@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface KITestObject : NSObject
+@class FBKVOController;
 
-@property NSString *name;
-@property NSString *title;
-@property NSInteger age;
-@property int hoge;
+@interface KIKeyValueObserver : NSObject
+
+@property FBKVOController *kvo;
+
++ (instancetype)sharedInstance;
 
 @end
